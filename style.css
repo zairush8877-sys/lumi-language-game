@@ -1,0 +1,212 @@
+*{box-sizing:border-box}body{margin:0;background:#142c3a;color:#173d45;font-family:system-ui,sans-serif;overflow:hidden}main{position:relative;width:min(100%,480px);height:100dvh;margin:auto;background:#ecf8e9;overflow:hidden}header{position:absolute;z-index:2;top:0;width:100%;display:flex;align-items:center;justify-content:space-between;padding:calc(14px + env(safe-area-inset-top)) 18px 12px;background:#fff9e8e8}header b{font-size:24px}button{font:inherit;border:0;border-radius:18px;padding:14px 18px;color:#183b43;background:#fff6da;cursor:pointer;min-height:48px;font-weight:750;touch-action:manipulation}button:focus-visible{outline:4px solid #ef8e49}button:disabled{opacity:.55}canvas{display:block;width:100%;height:100%}footer{position:absolute;bottom:0;width:100%;display:flex;justify-content:space-between;gap:12px;padding:18px 18px calc(18px + env(safe-area-inset-bottom))}#jump{background:#f8c85b;font-size:22px;min-width:160px;box-shadow:0 6px 0 #ca9339}#tip{position:absolute;bottom:110px;width:100%;text-align:center;padding:8px 20px;font-size:15px;font-weight:650}#panel{position:absolute;inset:80px 12px 105px;background:#fffaf0;border-radius:28px;box-shadow:0 14px 70px #173d4540;padding:22px;overflow:auto;text-align:center;z-index:3}#panel:empty{display:none}h1{font-size:32px;line-height:1.05;margin:12px 0}h2{font-size:25px;margin:12px 0}.eyebrow{letter-spacing:2px;font-size:11px;text-transform:uppercase;color:#55767a}.big{font-size:65px;margin:8px}.word{font-size:28px;font-weight:800;overflow-wrap:anywhere;margin:12px 0}.muted{font-size:13px;color:#5b7273;line-height:1.45}.actions{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin:14px 0}.primary{background:#286c65;color:white;width:100%}.choices{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}.choice{background:#e6efdf;padding:14px 5px}.choice span{display:block;font-size:38px}.chosen{background:#f6cb67}#feedback{min-height:24px;font-weight:650;color:#986025}a{color:#286c65}.badge{display:inline-block;background:#e9efd9;padding:7px 11px;border-radius:20px;margin:4px}details{text-align:left;font-size:13px;margin-top:20px}details p{overflow-wrap:anywhere}@media(max-height:620px){#panel{inset:68px 8px 88px;padding:14px}.big{font-size:42px}h1{font-size:26px}footer{padding:12px}#tip{bottom:80px;font-size:12px}.choices{margin:8px 0}.choice{padding:8px 4px}header{padding:10px 14px}}
+
+#panel h1{overflow-wrap:anywhere}
+
+#callout{position:absolute;top:90px;left:16px;right:16px;z-index:4;background:#fff0b3;color:#173d45;font-size:22px;box-shadow:0 5px 20px #173d4520}#callout[hidden]{display:none}.phrase{width:100%;font-size:16px;text-align:left}
+
+.goal{background:#e5efd8;border-radius:16px;padding:12px;font-weight:750;font-size:15px}.spoken{background:#fff0b3;padding:10px;border-radius:14px;font-size:17px;font-weight:750}#callout{pointer-events:none;overflow-wrap:anywhere}.choices{grid-template-columns:repeat(2,minmax(0,1fr))}.choice{overflow-wrap:anywhere}#owned{font-size:40px;overflow-wrap:anywhere}#back{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}#panel{overscroll-behavior:contain}@media(max-height:620px){#panel .goal{font-size:13px;padding:8px;margin:8px 0}#panel h1{margin:8px 0}#panel .actions{margin:10px 0}}
+#sound{flex-wrap:nowrap;gap:8px}#sound button{flex:1;min-width:0;padding:10px 6px;font-size:13px}#answers:not(.choices){display:flex;flex-wrap:wrap;gap:6px;justify-content:center}#answers:not(.choices) button{padding:10px;font-size:14px}#answers p{width:100%;margin:6px 0}#answers p:empty,#feedback:empty{display:none}@media(max-height:620px){#panel:has(#answers) .big{font-size:32px;margin:4px}#panel:has(#answers) .word{font-size:23px;margin:8px 0}#meaning{margin:8px 0}#sound{margin:8px 0}#panel:has(#answers) button{min-height:44px}#feedback{font-size:13px;margin:8px 0}}
+
+#word-preview{position:absolute;top:88px;left:14px;right:14px;border-radius:20px;padding:14px;background:#fff9e8eF;text-align:center;font-size:22px;font-weight:800;pointer-events:none;overflow-wrap:anywhere}#word-preview[hidden]{display:none}
+
+#callout.speech-retry{pointer-events:auto;font-size:17px}.spoken button{margin:6px}
+
+#jump{background:var(--theme-accent,#f8c85b)}header{border-bottom:3px solid var(--theme-accent,#f8c85b)}.primary{background:var(--theme-earth,#286c65)}
+
+.primary{background:color-mix(in srgb,var(--theme-earth,#286c65) 70%,#142c3a)}
+
+#estate{width:100%;height:auto;aspect-ratio:31/17;border-radius:18px;display:block;background:#c9e6e2}.estate-caption{font-size:13px;font-weight:700;margin:8px 0}.housecard{background:#e8efdf;border-radius:18px;padding:8px;margin:10px 0;display:flex;flex-direction:column;gap:6px}.housecard button{font-size:14px}.building-now{animation:build-pop .55s ease}@keyframes build-pop{from{transform:scale(.94);opacity:.5}to{transform:scale(1);opacity:1}}
+
+header{gap:4px}#audio-toggle{padding:8px;min-width:44px}#pause{padding:8px;min-width:44px}@media(max-width:340px){header b{font-size:20px}#progress{font-size:12px}header{padding-left:10px;padding-right:10px}}
+
+.plotgoods{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.plotchip{font-size:12px;border-radius:12px;min-height:44px;padding:8px;background:#e6efdf;flex:1 1 40%}#playername{display:block;width:100%;padding:12px;margin-top:8px;border:2px solid #91ba82;border-radius:12px;font:inherit}#players button{overflow-wrap:anywhere;max-width:100%}
+
+.walkcontrols{display:flex;gap:6px}.walkcontrols button{min-width:48px;padding:10px}.walkcontrols #walkdoor{flex:1;font-size:13px}#estate[data-inside]{cursor:pointer;touch-action:manipulation}#walktitle{font-size:24px}
+.housecatalog{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.housecatalog .housecard{margin:0;padding:5px;min-width:0;border:1px solid #c6d5bd}.housepreview{width:100%;height:auto;aspect-ratio:9/8}.housecatalog button{padding:8px 3px;font-size:12px;border-radius:12px;overflow-wrap:anywhere}.housecatalog p{font-size:10px;margin:3px 0}.estate-balance{font-weight:800;margin:8px}#panel:has(#housecards) h2{font-size:18px;margin:12px 0 7px}
+
+.translation{display:block;font-size:12px;font-weight:450;line-height:1.35;margin-top:5px;color:#526a70}.answerword>span{font-size:18px}.choice .answerword{display:block;font-size:18px}.choice .translation{font-size:11px}#jump span{display:block;font-size:19px}#jump small{display:block;font-size:11px;font-weight:500}#word-preview .translation{font-size:12px}
+
+#meaning.translation{font-size:20px;font-weight:650}.choice .translation{font-size:18px;font-weight:600}.choice .answerword>span{font-size:21px}#word-preview .translation{font-size:20px}.spoken .translation,#callout .translation{font-size:18px}.plotchip>span{font-size:18px}.plotchip .translation{font-size:11px}.housecatalog .translation{font-size:11px}.moregoods{width:100%;background:#d7e7d0;font-size:14px;margin:5px 0}#extragoods[hidden]{display:none}
+
+#meaning.translation{font-size:24px}.choice .translation{font-size:22px}.choice .answerword>span{font-size:24px}#word-preview .translation{font-size:24px}.spoken .translation,#callout .translation{font-size:22px}
+
+.arrangement{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.arrangement select{max-width:100%;padding:10px;border-radius:12px;font-size:16px}.arrangement p{width:100%;font-size:13px;margin:0}#estate{user-select:none}
+
+.finish-heading h1{font-weight:900;margin-bottom:8px}.finish-translation{background:#e5f0da;border-radius:12px;padding:8px 12px;margin:0 0 12px}.finish-translation small{display:block;font-size:11px;color:#526a70}.finish-translation strong{font-size:23px;font-weight:850}.finish-actions{margin:0 0 14px}.finish-stats{font-size:11px;color:#526a70;margin-top:14px}.finish-stats p{font-size:11px;margin:5px 0}
+
+.yard-view{overflow:auto;max-width:100%;border-radius:18px;overscroll-behavior:contain}.yard-view #estate{width:100%;min-width:620px;aspect-ratio:auto;height:auto}.yard-hint{font-size:12px;margin:6px 0;color:#48635a}
+
+.picture-choice>span:first-child{font-size:54px}.picture-choice{min-height:94px}#ages .chosen{outline:2px solid #397563}
+
+#panel:has(#answers){padding:12px}#panel:has(#answers).gate-test .big{display:none}#panel:has(#answers) .word{margin:7px 0;font-size:24px}#panel:has(#answers) #meaning{margin:6px 0;font-size:20px}#panel:has(#answers) #sound{margin:7px 0;gap:6px}#panel:has(#answers) .choices{gap:6px;margin:6px 0}#panel:has(#answers) .choice{padding:7px 5px;min-height:72px;border-radius:13px}#panel:has(#answers) .choice>span:first-child{font-size:26px;line-height:1.1}#panel:has(#answers) .choice .answerword>span{font-size:20px;line-height:1.12}#panel:has(#answers) .choice .translation{font-size:20px;line-height:1.12;margin-top:3px}#panel:has(#answers) .picture-choice>span:first-child{font-size:40px}#panel:has(#answers) #feedback{font-size:15px;margin:6px 0;min-height:0;color:#285b46}#panel:has(#answers) .hint-answer{outline:3px solid #3d9364;background:#d5f0d4}
+
+/* Three compact estate pages; logical canvas coordinates remain unchanged for touch dragging. */
+.yard-view #estate{min-width:0;width:100%;height:auto}.estate-pages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;margin:8px 0}.estate-pages button{padding:9px 4px;border-radius:12px;font-size:12px;min-height:44px}#estate-progress{width:100%;height:9px;accent-color:#286c65;margin-bottom:10px}.yard-view{overflow:hidden}#estate-goal{font-size:14px}.estate-balance{margin:8px 0}
+
+.menu-field{display:block;text-align:left;font-size:14px;font-weight:700;margin:12px 0}.menu-field select{display:block;width:100%;min-height:46px;margin-top:5px;padding:10px 12px;border:1px solid #91ba82;border-radius:12px;background:#fffdf4;color:#193d45;font:inherit;font-size:16px}#panel:has(#language-select) h1{font-size:27px;margin:12px 0 4px}#greeting-translation{margin:4px 0 16px}#panel:has(#language-select) #start button{width:100%;margin:8px 0}.menu-more{margin:12px 0}
+
+#greeting-translation{font-size:14px;line-height:1.4;margin-top:5px}
+
+/* Keep walking controls visible before optional yard settings on short phones. */
+@media(max-height:620px){#panel:has(#walktitle){padding:12px}#panel:has(#walktitle) #walktitle{font-size:21px;margin:6px 0}#panel:has(#walktitle) #walkhint{font-size:12px;line-height:1.25;margin:6px 0}#panel:has(#walktitle) .walkcontrols{margin:4px 0}#panel:has(#walktitle) #night-toggle{font-size:13px;min-height:44px;margin:6px 0;padding:8px 12px}}
+
+/* Readable bilingual controls and the same complete catalog in both languages. */
+#panel .translation{font-size:18px;font-weight:650;line-height:1.25;color:#304e53}
+#panel:has(#answers) #meaning,#panel:has(#answers) .choice .translation{font-size:20px}
+#panel .plotchip .translation,#panel .housecatalog .translation{font-size:16px;line-height:1.3;color:#23464b}
+#greeting-translation{font-size:18px;color:#304e53;font-weight:650}
+.menu-field{margin:9px 0}.menu-field .translation{margin-top:2px}
+#panel:has(#language-select) h1{font-size:25px;margin:7px 0 4px}#panel:has(#language-select) #start button{margin:4px 0}
+.housecatalog{grid-template-columns:minmax(0,1fr);gap:10px}
+.housecatalog .housecard{display:grid;grid-template-columns:100px minmax(0,1fr);align-items:center;padding:10px;gap:6px 10px}
+.housepreview{aspect-ratio:1;width:100px;grid-row:span 2}.housecatalog .housecard button{padding:10px 7px;min-width:0}.housecatalog .housecard button>span{font-size:20px}
+.housecatalog .housecard .catalog-status{grid-column:2;font-size:13px;line-height:1.3;margin:0;color:#48635b}
+.plotgoods{display:block}.goods-group{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin:12px 0}
+.goods-group h3{grid-column:1/-1;font-size:18px;text-align:left;margin:3px 0}
+.plotchip{width:100%;min-width:0;padding:10px 6px;overflow-wrap:anywhere}.plotchip>span{font-size:19px}.catalog-status{display:block;font-size:12px;line-height:1.3;margin-top:5px}
+.catalog-note{font-size:15px;line-height:1.35;color:#48635b;margin:6px 0}
+#jump small{font-size:16px;font-weight:650}#jump{min-width:145px}
+
+/* Optional purchases stay folded until the player asks to see them. */
+.more-purchases{margin:14px 0 8px;border:1px solid #b8cda3;border-radius:16px;background:#eef4e5;overflow:hidden}
+.more-purchases>summary{min-height:48px;padding:13px 15px;font-size:18px;font-weight:750;color:#234b42;cursor:pointer;touch-action:manipulation}
+.more-purchases>summary:focus-visible{outline:3px solid #ef8e49;outline-offset:-3px}
+.more-purchases[open]>summary{border-bottom:1px solid #cfdbbe}
+#extragoods{padding:0 10px 5px}#extragoods .goods-group{margin:10px 0}
+
+#panel .primary .translation{color:inherit}
+
+/* Russian controls stay readable without a second translation line. */
+#panel button:not(.choice),#panel summary{font-size:16px}
+#panel:has(#walktitle) #night-toggle{font-size:16px}
+
+/* Short landscape phones: keep the question beside four touch-friendly answers. */
+@media (orientation:landscape) and (max-height:500px) and (min-width:480px){
+ main:has(#answers){width:100%;max-width:960px}
+ header{padding:5px 12px;min-height:58px}
+ header b{font-size:20px}
+ #progress{font-size:14px}
+ footer{padding:8px 12px;align-items:center}
+ footer button{padding:8px 14px;min-height:44px}
+ #jump{min-width:145px;box-shadow:0 3px 0 #ca9339}
+ #jump span{font-size:18px;line-height:1.1}
+ #jump small{font-size:16px;line-height:1.1}
+ #tip{bottom:60px;padding:3px 16px}
+ /* Hero center <=130, complete wardrobe right edge <=30*1.3: leave 7px clear. */
+ main:not(:has(#answers)) #callout{top:calc(var(--hud-top,76px) + 8px);left:max(176px,var(--safe-left));right:max(8px,var(--safe-right));padding:8px 10px;font-size:20px;line-height:1.15;min-height:48px}
+ main:not(:has(#answers)) #callout .translation{font-size:20px;line-height:1.15;margin-top:4px}
+ #panel{inset:64px 8px 66px;padding:12px;border-radius:20px}
+ main:has(#answers) header{padding:0 12px;min-height:48px}
+ main:has(#answers) footer{padding:6px 12px}
+ #panel:has(#answers){inset:52px 8px 60px}
+ #panel:has(#answers){display:grid;grid-template-columns:minmax(210px,.8fr) minmax(0,2fr);grid-template-rows:repeat(4,min-content) minmax(0,1fr);column-gap:12px;row-gap:4px;padding:8px;align-content:start}
+ #panel:has(#answers)>.eyebrow{grid-column:1;grid-row:1;font-size:10px;letter-spacing:0;white-space:nowrap}
+ #panel:has(#answers)>.big{display:none}
+ #panel:has(#answers)>.word{grid-column:1;grid-row:2;margin:0;font-size:24px;line-height:1.1}
+ #panel:has(#answers)>#meaning{grid-column:1;grid-row:3;margin:0;font-size:20px;line-height:1.15}
+ #panel:has(#answers)>#sound{grid-column:1;grid-row:4;display:flex;gap:5px;margin:0}
+ #panel:has(#answers) #sound button{font-size:16px;line-height:1.1;padding:6px 4px;min-height:44px}
+ #panel:has(#answers)>#feedback{grid-column:1;grid-row:5;margin:0;font-size:14px;line-height:1.2;align-self:start}
+ #panel:has(#answers)>#answers{grid-column:2;grid-row:1/6;margin:0;min-width:0;align-self:stretch}
+ #panel:has(#answers)>#answers.choices{grid-template-rows:repeat(2,minmax(64px,1fr));gap:6px;align-content:center}
+ #panel:has(#answers) .choice{display:grid;grid-template-columns:22px minmax(0,1fr);align-items:center;column-gap:4px;min-height:64px;padding:4px}
+ #panel:has(#answers) .choice>span:first-child{font-size:25px;line-height:1}
+ #panel:has(#answers) .choice .answerword>span,#panel:has(#answers) .choice .translation{font-size:20px;line-height:1.1}
+ #panel:has(#answers) .choice .translation{margin-top:3px}
+ #panel:has(#answers) .picture-choice{display:flex;align-items:center;justify-content:center}
+ #panel:has(#answers) .picture-choice>span:first-child{font-size:44px}
+ #panel:has(#answers):not(.gate-test)>.big{display:block;grid-column:2;grid-row:1/4;align-self:center;margin:0;font-size:64px}
+ #panel:has(#answers):not(.gate-test)>#answers{grid-row:4/6;align-self:center}
+}
+
+/* Phone layout: real HUD bounds, safe areas, and usable touch controls. */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+main{--safe-top:env(safe-area-inset-top,0px);--safe-right:env(safe-area-inset-right,0px);--safe-bottom:env(safe-area-inset-bottom,0px);--safe-left:env(safe-area-inset-left,0px);height:100vh;height:var(--app-height,100dvh)}
+main header,main:has(#answers) header{display:grid;grid-template-columns:auto minmax(0,1fr) 48px 48px;gap:6px;padding:calc(8px + var(--safe-top)) max(12px,var(--safe-right)) 8px max(12px,var(--safe-left));min-height:0}
+header b{white-space:nowrap;font-size:clamp(18px,5vw,24px)}
+#progress{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center;font-size:13px}
+#audio-toggle,#pause{width:48px;min-height:48px;padding:8px}
+main footer,main:has(#answers) footer{gap:8px;align-items:center;padding:8px max(12px,var(--safe-right)) calc(12px + var(--safe-bottom)) max(12px,var(--safe-left))}
+footer button{min-width:0;padding:10px 12px;min-height:48px}
+#menu{flex:1;overflow-wrap:anywhere}
+#jump{flex:1;min-width:145px}
+#panel,#panel:has(#answers){top:calc(var(--hud-top,76px) + 8px);bottom:calc(var(--hud-bottom,88px) + 8px);left:max(8px,var(--safe-left));right:max(8px,var(--safe-right));scroll-padding:12px;overflow-x:hidden;-webkit-overflow-scrolling:touch}
+#callout,#word-preview{top:calc(var(--hud-top,76px) + 8px);left:max(14px,var(--safe-left));right:max(14px,var(--safe-right))}
+#tip{bottom:calc(var(--hud-bottom,88px) + 8px)}
+#panel summary{min-height:48px;padding:12px 8px;line-height:1.4;cursor:pointer;touch-action:manipulation}
+#panel .menu-more>summary,#panel .menu-adults>summary{background:#e5efd8;border-radius:12px;font-weight:750}
+#panel button,#panel select{min-width:44px;min-height:48px}
+#answers:not(.choices) button{min-width:48px}
+.arrangement select{min-height:48px;width:100%}
+.actions,.arrangement,.walkcontrols,.estate-pages,.goods-group{gap:8px}
+#sources a{display:inline-flex;align-items:center;min-height:44px;padding-block:8px;max-width:100%;overflow-wrap:anywhere}
+#playername{font-size:16px;min-height:48px;scroll-margin-block:12px}
+#homebuttons{margin:10px 0 16px}
+#homebuttons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+#homebuttons button{padding:8px;overflow-wrap:anywhere}
+#homebuttons button:not(.primary){flex:1}
+#walkleft,#walkright{touch-action:none}
+button:active:not(:disabled){filter:brightness(.93)}
+@media(max-height:620px){
+ #panel{padding:12px}
+ #panel:has(#answers) .word{line-height:1.15}
+ #panel:has(#answers) #meaning{line-height:1.2}
+ #panel:has(#answers) .choice{min-height:64px}
+ #panel:has(#answers) .choice>span:first-child{font-size:24px}
+ #panel:has(#answers) .picture-choice>span:first-child{font-size:38px}
+ #panel:has(#answers) #sound button{font-size:16px;padding:6px 4px}
+}
+@media(orientation:landscape) and (max-height:500px) and (min-width:480px){
+ main{width:min(100%,960px)}
+ #panel:has(#language-select){display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:4px 20px;align-content:start}
+ #panel:has(#language-select)>.eyebrow{grid-column:1;grid-row:1}
+ #panel:has(#language-select)>h1{grid-column:1;grid-row:2}
+ #greeting-translation{grid-column:1;grid-row:3;margin:0}
+ .menu-field:has(#language-select){grid-column:2;grid-row:1/3;margin:0}
+ .menu-field:has(#age-select){grid-column:2;grid-row:3;margin:0}
+ #panel:has(#language-select)>#start{grid-column:2;grid-row:4}
+ #panel:has(#language-select)>.menu-more{grid-column:1;grid-row:4;margin:0}
+ #panel:has(#language-select)>.menu-adults{grid-column:1/-1;grid-row:5;margin:0}
+ .yard-view{width:min(100%,max(120px,calc((var(--app-height,100dvh) - var(--hud-top,76px) - var(--hud-bottom,88px) - 40px)*1.24)));margin-inline:auto}
+ #panel:has(#walktitle){display:grid;grid-template-columns:minmax(0,1.35fr) minmax(220px,1fr);grid-template-rows:auto auto auto auto 1fr;gap:4px 16px;align-content:start}
+ #panel:has(#walktitle)>.eyebrow{display:none}
+ #walktitle{grid-column:2;grid-row:1;font-size:21px;line-height:1.1;margin:0}
+ #panel:has(#walktitle)>.yard-view{grid-column:1;grid-row:1/6;align-self:start;justify-self:center;max-width:100%;width:max(120px,calc((var(--app-height,100dvh) - var(--hud-top,76px) - var(--hud-bottom,88px) - 40px)*1.24))}
+ #walkhint{grid-column:2;grid-row:2;margin:0;font-size:14px;line-height:1.25}
+ .walkcontrols{grid-column:2;grid-row:3}
+ #panel:has(#walktitle)>#night-toggle{grid-column:2;grid-row:4;margin:0}
+ #panel:has(#walktitle)>#back{grid-column:2;grid-row:5;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:0;align-content:start}
+ #panel:has(#walktitle)>#back button{padding:6px 4px;font-size:16px;overflow-wrap:anywhere;min-width:0}
+ #panel:has(#homebuttons):not(:has(#estate[data-arranging="true"])){display:grid;grid-template-columns:minmax(0,1.35fr) minmax(220px,1fr);gap:4px 16px;align-content:start}
+ #panel:has(#homebuttons):not(:has(#estate[data-arranging="true"]))>.eyebrow{display:none}
+ #panel:has(#homebuttons):not(:has(#estate[data-arranging="true"]))>h1{grid-column:2;grid-row:1;font-size:21px;line-height:1.1;margin:0}
+ #panel:has(#homebuttons):not(:has(#estate[data-arranging="true"]))>.yard-view{grid-column:1;grid-row:1/3;align-self:start}
+ #panel:has(#homebuttons):not(:has(#estate[data-arranging="true"]))>#homebuttons{grid-column:2;grid-row:2;margin:0;align-content:start}
+ #panel:has(#homebuttons):not(:has(#estate[data-arranging="true"]))>#homebuttons button{padding:6px 4px;line-height:1.1}
+ #panel:has(#homebuttons):not(:has(#estate[data-arranging="true"]))>*:not(.yard-view):not(#homebuttons):not(h1):not(.eyebrow){grid-column:1/-1}
+}
+/* While moving items, keep the whole yard and editing tools together. */
+#panel:has(#estate[data-arranging="true"]){display:grid;grid-template-columns:minmax(0,1fr);gap:8px;align-content:start}
+#panel:has(#estate[data-arranging="true"])>*:not(.yard-view):not(.arrangement){display:none}
+#panel:has(#estate[data-arranging="true"])>.yard-view{width:min(100%,max(120px,calc((var(--app-height,100dvh) - var(--hud-top,76px) - var(--hud-bottom,88px) - 240px)*1.24)));margin-inline:auto}
+#panel:has(#estate[data-arranging="true"])>.arrangement{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:0}
+#panel:has(#estate[data-arranging="true"])>.arrangement button{padding:6px;min-width:0}
+#panel:has(#estate[data-arranging="true"])>.arrangement select{min-width:0}
+#panel:has(#estate[data-arranging="true"]) #arrange-tip{grid-column:1/-1;line-height:1.25}
+@media(orientation:landscape) and (max-height:500px) and (min-width:480px){
+ #panel:has(#estate[data-arranging="true"]){grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:16px}
+ #panel:has(#estate[data-arranging="true"])>.yard-view{width:min(100%,max(120px,calc((var(--app-height,100dvh) - var(--hud-top,76px) - var(--hud-bottom,88px) - 40px)*1.24)))}
+}
+@media(prefers-reduced-motion:reduce){.building-now{animation:none}}
+@media(orientation:landscape) and (max-height:340px) and (min-width:480px){
+ main header,main:has(#answers) header{padding-top:calc(4px + var(--safe-top));padding-bottom:4px}
+ #panel:has(#answers)>.word{font-size:22px;line-height:1.1}
+ #panel:has(#language-select){gap:4px 12px}
+ #panel:has(#language-select)>.eyebrow,#greeting-translation{display:none}
+ #panel:has(#language-select)>h1{grid-column:1/-1;grid-row:1;font-size:21px;margin:0;line-height:1.1}
+ .menu-field:has(#language-select){grid-column:1;grid-row:2}
+ .menu-field:has(#age-select){grid-column:2;grid-row:2}
+ #panel:has(#language-select)>#start{grid-column:1/-1;grid-row:3}
+ #panel:has(#language-select)>.menu-more{grid-column:1/-1;grid-row:4}
+ #panel:has(#language-select)>.menu-adults{grid-column:1/-1;grid-row:5}
+}

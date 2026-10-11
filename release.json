@@ -1,6 +1,6 @@
 {
-  "version": "9c4ad31b8cf7e537",
-  "sourceGameVersion": "35155449890b81c7",
+  "version": "4146d7dfe3153faf",
+  "sourceGameVersion": "4db5fd336f4037f5",
   "activeLanguages": [
     "kbd",
     "krc"
@@ -373,24 +373,25 @@
     "icon-180.png": "43a03e95b9222c16a854b71c233138043ee24f50a82890fb11513e8163918757",
     "icon-192.png": "3ba49ef7a0adfbdc943f98a4d210fdac82012d92e75a94c23e17fd3a1d98bbed",
     "icon-512.png": "f2f0cbb6f9abb49bafce887db02ff0334d05bded7f10f14ece39bdc42b7fd4b4",
-    "index.html": "3ba12f90cb0279d2e387ba11a0fa457c5175724cd7b2612a965ba54f9c6be3a4",
+    "index.html": "0ff9302486c0cef4dd7cf32783fcc74688dab5c5e332f37caa3f2e5abfeca788",
     "install-client.js": "65a5aaf9d25a7c64adcfc3349e16790c9e3bedb6c603a75a000bf03a881142df",
     "install.html": "2b4ffd6f5a3b18f4fb4c53e970195422c33be1385ca4043176e187c4ee8dab16",
     "licenses/silero-model.txt": "1349a4b6148492b44f629e64eed676612e234fe9a839e4f3b277c1482c8849f1",
-    "lumi-offline.zip": "73d39e90b197c90b3044c240f2d0b3af7eb6d7ae3a18dd4dbeb38c33531b32a3",
+    "lumi-offline.zip": "bd8f2dfb0f00b7fb28d89c438464e9078217a368f8759309fed3a1b153db5a5c",
     "manifest.webmanifest": "d6ecd826a85e2cca3cf459deea9f9977448ee06c4d8f93fdd00b4594598229d6",
     "pwa-client.js": "db8b71cad9fa705cd21285dacc05aa9c322b3c45cbb733c2075b5b3505ca1dd3",
-    "style.css": "a79e3bd46f13dca2282591b53e583ce49451c6749e8b782f03336a1e8effade7",
+    "style.css": "2c30730daa464f2b4db1954f35bcfbc587a189c3f350e6cec9de6aafd784e0b4",
     "voice.js": "6c678ff44a74dff91bb7f25466ed899e66dd7903651139f7ac8babd2865b85b3",
     "world.js": "3446a2f06391f3ada57f500a788018e4ec52b6f1506d44f90a37e3395e7bb73e"
   },
-  "serviceWorkerSHA256": "e1d2d7d3ef45fc3f155845c4438dae8a32726836f49f2fb940c832ce5c4567bd",
+  "serviceWorkerSHA256": "8889fc830e28eecebf52ec947d58c45176274987e2315f2a728881db2f100f34",
   "precacheCount": 365,
   "downloadExcludedFromPrecache": true,
   "publicChanges": [
     "install/download help and credits",
     "complete model license label",
     "test version document title",
-    "normalize host redirect responses for offline navigation"
+    "normalize host redirect responses for offline navigation",
+    "developer credit below game controls"
   ]
 }

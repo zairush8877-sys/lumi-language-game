@@ -210,3 +210,7 @@ button:active:not(:disabled){filter:brightness(.93)}
  #panel:has(#language-select)>.menu-more{grid-column:1/-1;grid-row:4}
  #panel:has(#language-select)>.menu-adults{grid-column:1/-1;grid-row:5}
 }
+
+/* Keep the developer credit below controls, within the measured phone HUD. */
+main footer,main:has(#answers) footer{flex-wrap:wrap;row-gap:6px}
+#developer-credit{flex:0 0 100%;margin:0;padding:3px 6px;border-radius:8px;background:#fff9e8e8;color:#173d45;font-size:12px;font-weight:600;line-height:1.35;text-align:center;overflow-wrap:anywhere}

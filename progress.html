@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; connect-src 'none'">
+  <title>Луми · Сохранение и перенос</title>
+  <link rel="stylesheet" href="progress.css">
+  <script src="save-transfer-core.js" defer></script>
+  <script src="progress-client.js" defer></script>
+</head>
+<body data-browser-mode="export-only"><main>
+  <a class="back" href="./">← Вернуться в игру</a>
+  <p class="eyebrow">Луми · Для взрослых</p>
+  <h1>Сохранение и перенос</h1>
+  <p>Звёзды, покупки, дом и игроки хранятся на этом устройстве. Скачайте файл перед сменой телефона или очисткой данных.</p>
+  <section aria-labelledby="export-title">
+    <h2 id="export-title">1. Сохранить копию</h2>
+    <p>Откройте эту страницу в том же браузере, где играли. Вернитесь в меню игры и закройте другие вкладки Луми перед переносом.</p>
+    <button id="export" type="button">↓ Сохранить файл «lumi-save.json»</button>
+    <p id="source-help" class="muted">Для переноса в Android сначала сохраните файл в старой игре, затем откройте его в приложении.</p>
+  </section>
+  <section id="import-section" hidden aria-labelledby="import-title">
+    <h2 id="import-title">2. Открыть копию</h2>
+    <p>Выберите файл «lumi-save.json». Сначала покажем игроков и звёзды. Прогресс изменится только после вашего подтверждения.</p>
+    <button id="choose" type="button">↑ Выбрать сохранение</button>
+    <input id="file" type="file" accept="application/json,.json" hidden>
+  </section>
+  <p id="status" role="status" aria-live="polite"></p>
+  <section id="preview" hidden aria-labelledby="preview-title">
+    <h2 id="preview-title">Проверьте перенос</h2>
+    <h3>Сейчас на этом устройстве</h3>
+    <ul id="current-profiles"></ul>
+    <h3>В выбранной копии</h3>
+    <ul id="incoming-profiles"></ul>
+    <p id="replace-summary"></p>
+    <p>Копия полностью заменит местное сохранение: игроков, звёзды, покупки и настройки. Балансы не складываются. Прежнюю копию сохраним для возврата.</p>
+    <label class="confirm"><input id="confirm-replace" type="checkbox"> Я проверил(а) список и хочу заменить местное сохранение этой копией.</label>
+    <label class="confirm"><input id="tabs-closed" type="checkbox"> Другие вкладки и окна игры закрыты.</label>
+    <button id="commit" type="button" disabled>Заменить сохранение</button>
+    <button id="cancel" type="button" class="secondary">Отменить</button>
+  </section>
+  <section id="backups" hidden aria-labelledby="backups-title">
+    <h2 id="backups-title">Копии до переноса</h2>
+    <p>Они остаются только на этом устройстве. Возврат тоже требует проверки и подтверждения.</p>
+    <div id="backup-list"></div>
+  </section>
+  <section class="help" aria-labelledby="help-title">
+    <h2 id="help-title">Из браузера в Android</h2>
+    <ol>
+      <li>Откройте старую <a id="github-game" href="https://zairush8877-sys.github.io/lumi-language-game/">игру по ссылке GitHub</a> в привычном браузере.</li>
+      <li>В игре: «Дом, сад и настройки» → «Сменить игрока» → «Скачать сохранение». Или откройте <a id="github-progress" href="https://zairush8877-sys.github.io/lumi-language-game/progress.html">страницу сохранения</a> в том же браузере.</li>
+      <li>В Android: «Для взрослых» → «Сохранение и перенос» → «Выбрать сохранение».</li>
+      <li>Сверьте имена и звёзды, затем подтвердите замену. Старая игра и скачанный файл останутся у вас.</li>
+    </ol>
+    <p>Автоматического переноса между браузером и приложением нет. Очистка данных или удаление приложения может удалить местную копию; храните скачанный файл отдельно.</p>
+    <p class="muted">Игра бесплатная. Активны кабардинский и балкарский языки. Файл содержит имена игроков и их прогресс — храните его у себя.</p>
+  </section>
+  <footer>Разработчик — Маирова Заира Владимировна</footer>
+</main></body>
+</html>

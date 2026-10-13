@@ -1,0 +1,18 @@
+:root{color-scheme:light;font-family:system-ui,-apple-system,sans-serif;color:#174b45;background:#fff9e8;font-size:17px;line-height:1.55}
+*{box-sizing:border-box}
+body{margin:0;padding:18px max(18px,env(safe-area-inset-right)) max(24px,env(safe-area-inset-bottom)) max(18px,env(safe-area-inset-left))}
+main{max-width:740px;margin:auto}
+h1{font-size:clamp(28px,6vw,38px);line-height:1.15;margin:14px 0 22px;letter-spacing:-.025em}
+h2{font-size:23px;line-height:1.25;margin:0 0 14px}h3{font-size:18px;margin:20px 0 8px}
+section{padding:22px 0;border-top:1px solid #d6decf}p{margin:10px 0 16px}
+a{color:#145c54;text-underline-offset:4px;overflow-wrap:anywhere}.back{display:inline-block;min-height:44px;padding:8px 0}
+button{font:inherit;font-weight:650;line-height:1.3;min-height:48px;padding:13px 18px;max-width:100%;border:2px solid #176357;border-radius:13px;background:#176357;color:white;cursor:pointer;text-align:left;overflow-wrap:anywhere}
+button:disabled{opacity:.5;cursor:default}button.secondary{background:transparent;color:#174b45}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #b57500;outline-offset:4px}
+.eyebrow{font-size:14px;letter-spacing:.08em;text-transform:uppercase;margin:6px 0;color:#56755f}.muted{font-size:15px;color:#526d64}
+.confirm{display:flex;gap:12px;align-items:flex-start;margin:18px 0;cursor:pointer}.confirm input{width:24px;height:24px;flex:0 0 24px;margin:2px 0;accent-color:#176357}
+#status:not(:empty){padding:16px;border-radius:12px;background:#e7f1dc;border:1px solid #b2c99f}#status[data-error=true]{background:#fff0db;border-color:#d8a64b;color:#733914}
+#preview{background:#f3f5e6;border:1px solid #c7d5bd;padding:22px;border-radius:16px}#preview button{margin:4px 8px 4px 0}
+ul,ol{padding-left:23px}li{padding-left:2px;margin:10px 0;overflow-wrap:anywhere}
+.backup{margin:12px 0;padding:14px;background:#f2f1df;border-radius:12px}.backup p{margin:0 0 10px;font-size:15px}.backup button{font-size:15px;margin:4px 8px 4px 0}
+footer{font-size:14px;padding:22px 0 8px;border-top:1px solid #d6decf}[hidden]{display:none!important}
+@media(max-width:360px){body{padding-left:14px;padding-right:14px}#preview{padding:16px}button{width:100%}}

@@ -1,5 +1,5 @@
 {
-  "version": "4146d7dfe3153faf",
+  "version": "3015011fc4abb142",
   "sourceGameVersion": "4db5fd336f4037f5",
   "activeLanguages": [
     "kbd",
@@ -382,16 +382,22 @@
     "pwa-client.js": "db8b71cad9fa705cd21285dacc05aa9c322b3c45cbb733c2075b5b3505ca1dd3",
     "style.css": "2c30730daa464f2b4db1954f35bcfbc587a189c3f350e6cec9de6aafd784e0b4",
     "voice.js": "6c678ff44a74dff91bb7f25466ed899e66dd7903651139f7ac8babd2865b85b3",
-    "world.js": "3446a2f06391f3ada57f500a788018e4ec52b6f1506d44f90a37e3395e7bb73e"
+    "world.js": "3446a2f06391f3ada57f500a788018e4ec52b6f1506d44f90a37e3395e7bb73e",
+    "progress.html": "fe5ab9041dda4fd0e8ceea652cbd3c32fa8f26208adea656805d79911c3d225f",
+    "progress.css": "8a2ae623d7d5e694233cc64de81546d6b3dcec48b08de64ca7163ecd24b26deb",
+    "save-transfer-core.js": "291e9ec104f5e844c635e17942c204632bee701c5b43366464d31dd2798344b1",
+    "progress-client.js": "7eace9fc78eda99cc9606fd79f52577edbe5da3fee5ebb3c1de6d7c5d092ef8d",
+    "privacy-android.html": "094c7d150c47908e8a45ab2e4e08043476fce20c36f6195e971a14b1748db042"
   },
-  "serviceWorkerSHA256": "8889fc830e28eecebf52ec947d58c45176274987e2315f2a728881db2f100f34",
-  "precacheCount": 365,
+  "serviceWorkerSHA256": "1520ae7d67c035c1e2b9ecc3e8b23f69f0348618c03d5993a492f0d5b8c6e5b5",
+  "precacheCount": 370,
   "downloadExcludedFromPrecache": true,
   "publicChanges": [
     "install/download help and credits",
     "complete model license label",
     "test version document title",
     "normalize host redirect responses for offline navigation",
-    "developer credit below game controls"
+    "developer credit below game controls",
+    "read-only progress export for Android and offline Android privacy policy"
   ]
 }

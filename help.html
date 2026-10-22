@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#286c65">
+  <title>Луми · Помощь для родителей</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#f5f1e7;color:#174b45;font:18px/1.55 system-ui,sans-serif}main{max-width:720px;margin:auto;padding:24px 20px calc(28px + env(safe-area-inset-bottom))}h1{font-size:clamp(30px,7vw,42px);line-height:1.15;margin:20px 0}h2{font-size:24px}p{margin:14px 0}a{color:#175e59;text-underline-offset:4px}.back{display:inline-flex;align-items:center;min-height:48px}.card{margin:24px 0;padding:20px;background:#f4f8e9;border:1px solid #bccdae;border-radius:22px}details{border-top:1px solid #c6d2bd;padding:8px 0}summary{min-height:48px;cursor:pointer;font-weight:700;padding:8px 0}details p{margin:8px 0 18px}.action{display:flex;justify-content:center;align-items:center;min-height:52px;padding:13px 16px;margin:14px 0;border-radius:15px;background:#286c65;color:white;text-decoration:none;font-weight:700;text-align:center}.secondary{background:#dfe8d4;color:#174b45}.note{font-size:16px}a:focus-visible,summary:focus-visible{outline:3px solid #b35922;outline-offset:4px}footer{font-size:15px;margin-top:30px}#support-version{overflow-wrap:anywhere}
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="./">← Вернуться к игре</a>
+    <h1>Помощь для родителей</h1>
+    <p>Луми — бесплатная игра. Здесь можно найти ответ или сообщить об ошибке автору.</p>
+    <section class="card" aria-labelledby="quick-help-title">
+      <h2 id="quick-help-title">Что случилось?</h2>
+      <details><summary>Не слышно звук</summary><p>Коснитесь экрана, начните игру и нажмите 🔊. Проверьте громкость и Bluetooth-наушники. На iPhone проверьте беззвучный режим. Если игра открыта в мессенджере, откройте тот же адрес в Safari или Chrome.</p></details>
+      <details><summary>Где баллы и покупки?</summary><p>Откройте тот же адрес в том же браузере или приложении, где играли. Не очищайте данные сайта и не удаляйте приложение ради проверки. Перед переносом используйте резервную копию в настройках. <a href="progress.html">Подготовить копию прогресса</a>. Файл сохранения боту не присылайте.</p></details>
+      <details><summary>Как получить обновление?</summary><p>Закончите маршрут и откройте меню. При появлении кнопки обновления нажмите её между уровнями. Обычное обновление по тому же адресу сохраняет совместимый прогресс. Для обновления не нужно очищать данные браузера. Автономный APK и ZIP обновляются отдельно.</p></details>
+      <details><summary>Ошибка в слове, переводе или управлении</summary><p>Укажите кабардинский или балкарский язык, слово либо место в игре, что вы сделали и что ожидали увидеть. Если удобно, добавьте только тип устройства: iPhone, Android, Windows или Mac.</p></details>
+    </section>
+    <section class="card" aria-labelledby="telegram-help-title">
+      <h2 id="telegram-help-title">Написать о проблеме</h2>
+      <p>Отдельный бот Луми <strong>@lumiZV_bot</strong> отвечает на частые вопросы и принимает заявки. Для Telegram нужен интернет.</p>
+      <details id="parent-confirmation">
+        <summary>Я родитель или взрослый: открыть поддержку</summary>
+        <p>Не отправляйте имя ребёнка, контакты, фото, голос, пароли или полное сохранение. Опишите только проблему.</p>
+        <a id="help-bot-link" class="action" href="https://t.me/lumiZV_bot?start=lumi_help" rel="noreferrer">Задать вопрос боту</a>
+        <a id="feedback-bot-link" class="action secondary" href="https://t.me/lumiZV_bot?start=lumi_feedback" rel="noreferrer">Сообщить об ошибке</a>
+        <p class="note">Бот покажет черновик. Только после вашего подтверждения появится номер заявки и уведомление автору. Текст хранится до 30 дней, черновик — до 24 часов при работающей очистке. Имя и профиль Telegram автору не пересылаются.</p>
+        <p class="note">Регистрация заявки ещё не означает исправления. В боте можно отдельно проверить статус. Сообщения и резервные копии Telegram не удаляются очисткой очереди Луми.</p>
+      </details>
+    </section>
+    <p class="note">Сведения о выпуске: <span id="support-version">смотрите в меню игры</span>.</p>
+    <footer>Разработчик — Маирова Заира Владимировна</footer>
+  </main>
+  <script>
+    fetch('release.json', {cache:'no-store',credentials:'omit',referrerPolicy:'no-referrer'})
+      .then(r => r.ok ? r.json() : null)
+      .then(r => { if (typeof r?.version === 'string' && /^[a-f0-9]{16}$/.test(r.version)) document.getElementById('support-version').textContent = r.version; })
+      .catch(() => {});
+  </script>
+</body>
+</html>

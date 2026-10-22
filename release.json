@@ -1,5 +1,5 @@
 {
-  "version": "3015011fc4abb142",
+  "version": "91b4613da4f15f40",
   "sourceGameVersion": "4db5fd336f4037f5",
   "activeLanguages": [
     "kbd",
@@ -14,7 +14,8 @@
     "style.css",
     "voice.js",
     "world.js",
-    "install-client.js"
+    "install-client.js",
+    "help-client.js"
   ],
   "sha256": {
     "audio/kbd/encounters/hedgehog-pass.wav": "bc0f347d231f306b26e0c2018de91c62675127917ec2c7133dce00fe73729eab",
@@ -373,7 +374,7 @@
     "icon-180.png": "43a03e95b9222c16a854b71c233138043ee24f50a82890fb11513e8163918757",
     "icon-192.png": "3ba49ef7a0adfbdc943f98a4d210fdac82012d92e75a94c23e17fd3a1d98bbed",
     "icon-512.png": "f2f0cbb6f9abb49bafce887db02ff0334d05bded7f10f14ece39bdc42b7fd4b4",
-    "index.html": "0ff9302486c0cef4dd7cf32783fcc74688dab5c5e332f37caa3f2e5abfeca788",
+    "index.html": "5557fb291e8a09445e2488e6af6d1fece3e9b1c376b40033aa2600b3129bcddb",
     "install-client.js": "65a5aaf9d25a7c64adcfc3349e16790c9e3bedb6c603a75a000bf03a881142df",
     "install.html": "2b4ffd6f5a3b18f4fb4c53e970195422c33be1385ca4043176e187c4ee8dab16",
     "licenses/silero-model.txt": "1349a4b6148492b44f629e64eed676612e234fe9a839e4f3b277c1482c8849f1",
@@ -387,9 +388,11 @@
     "progress.css": "8a2ae623d7d5e694233cc64de81546d6b3dcec48b08de64ca7163ecd24b26deb",
     "save-transfer-core.js": "291e9ec104f5e844c635e17942c204632bee701c5b43366464d31dd2798344b1",
     "progress-client.js": "7eace9fc78eda99cc9606fd79f52577edbe5da3fee5ebb3c1de6d7c5d092ef8d",
-    "privacy-android.html": "094c7d150c47908e8a45ab2e4e08043476fce20c36f6195e971a14b1748db042"
+    "privacy-android.html": "094c7d150c47908e8a45ab2e4e08043476fce20c36f6195e971a14b1748db042",
+    "help-client.js": "d7998272cc61c345da9cdd187976130ec1c0bb7792442fcbe063fceb0ecbdb68",
+    "help.html": "9652e60352e5b4a9a40bf407c1ea515806000ba1fb59ac32f18155b346ddfd31"
   },
-  "serviceWorkerSHA256": "1520ae7d67c035c1e2b9ecc3e8b23f69f0348618c03d5993a492f0d5b8c6e5b5",
+  "serviceWorkerSHA256": "6336f93e69ce3a86df2dfdefa4b9083c5de5a1d870cf9e3c3594836b0c8e0c0d",
   "precacheCount": 370,
   "downloadExcludedFromPrecache": true,
   "publicChanges": [
@@ -399,5 +402,11 @@
     "normalize host redirect responses for offline navigation",
     "developer credit below game controls",
     "read-only progress export for Android and offline Android privacy policy"
-  ]
+  ],
+  "parentSupport": {
+    "botUsername": "lumiZV_bot",
+    "ready": true,
+    "confirmationRequired": true,
+    "automaticAIPatch": false
+  }
 }
